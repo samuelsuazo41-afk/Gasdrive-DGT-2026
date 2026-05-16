@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GasDrive DGT V8.0</title>
 <link rel="manifest" href="/Gasdrive-DGT-2026/manifest.json">
-<meta name="theme-color" content="#00D9FF">
+<meta name="theme-color" content="#C0C0C0">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { 
@@ -15,12 +15,14 @@ body {
   padding-bottom: 80px;
 }
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #C0C0C0 0%, #2C2C2C 100%);
   padding: 20px;
   text-align: center;
+  border-bottom: 2px solid #C0C0C0;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.3);
 }
-.header h1 { font-size: 24px; margin-bottom: 5px; }
-.coins { font-size: 20px; font-weight: bold; }
+.header h1 { font-size: 24px; margin-bottom: 5px; color: #000; }
+.coins { font-size: 20px; font-weight: bold; color: #000; }
 
 .tabs {
   display: flex;
@@ -39,7 +41,7 @@ body {
   font-size: 12px;
   cursor: pointer;
 }
-.tab-btn.active { color: #667eea; }
+.tab-btn.active { color: #C0C0C0; }
 
 .tab-content { display: none; padding: 20px; }
 .tab-content.active { display: block; }
@@ -54,7 +56,11 @@ body {
   white-space: nowrap;
   cursor: pointer;
 }
-.sub-tab-btn.active { background: #667eea; color: #fff; }
+.sub-tab-btn.active { 
+  background: linear-gradient(135deg, #C0C0C0, #A9A9A9); 
+  color: #000; 
+  font-weight: bold;
+}
 
 .sub-content { display: none; }
 .sub-content.active { display: block; }
@@ -82,7 +88,7 @@ body {
 }
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #C0C0C0, #2C2C2C);
   transition: width 0.3s;
 }
 
@@ -96,22 +102,24 @@ body {
   position: relative;
 }
 .opcion:hover { background: #353542; }
-.opcion.correcta { background: #1a5d1a; border: 1px solid #2ecc71; }
+.opcion.correcta { background: #1a2a1a; border: 2px solid #C0C0C0; }
 .opcion.incorrecta { background: #5d1a1a; border: 1px solid #e74c3c; }
 .opcion.bloqueada { pointer-events: none; opacity: 0.7; }
 
 .btn {
   width: 100%;
   padding: 15px;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #C0C0C0, #2C2C2C);
   border: none;
   border-radius: 8px;
-  color: #fff;
+  color: #000;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 15px;
+  box-shadow: 0 3px 10px rgba(192, 192, 192, 0.4);
 }
+.btn:hover { box-shadow: 0 5px 15px rgba(192, 192, 192, 0.6); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .feedback {
@@ -120,7 +128,7 @@ body {
   font-weight: bold;
   margin: 15px 0;
 }
-.feedback.acierto { color: #2ecc71; }
+.feedback.acierto { color: #C0C0C0; }
 .feedback.fallo { color: #e74c3c; }
 
 .garage-grid, .shop-grid {
@@ -137,20 +145,20 @@ body {
 .garage-car.locked, .emoji-item.locked { opacity: 0.4; }
 .btn-buy {
   padding: 8px 15px;
-  background: #667eea;
+  background: linear-gradient(135deg, #C0C0C0, #2C2C2C);
   border: none;
   border-radius: 6px;
-  color: #fff;
+  color: #000;
   margin-top: 10px;
   cursor: pointer;
 }
-.btn-buy:disabled { background: #444; }
+.btn-buy:disabled { background: #444; color: #888; }
 
 .timer {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  color: #f39c12;
+  color: #C0C0C0;
   margin-bottom: 20px;
 }
 
